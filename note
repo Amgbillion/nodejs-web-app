@@ -1,0 +1,266 @@
+In the context of cloud computing and infrastructure management, a stack and a stack set are concepts used in AWS (Amazon Web Services) through a service called AWS CloudFormation.
+
+1. **Stack**:
+   - A stack in AWS CloudFormation is a collection of AWS resources that you can create, update, or delete as a single unit. It's essentially a template of resources, configurations, and dependencies that define the infrastructure for your application.
+   - You define a stack using a CloudFormation template, which is a JSON or YAML file describing the AWS resources, their properties, and their interrelationships. The template can include EC2 instances, databases, networking configurations, security groups, and more.
+   - Stacks are typically used to manage a single application or component of your infrastructure.
+
+2. **Stack Set**:
+   - A stack set is an AWS CloudFormation feature that allows you to create, update, or delete stacks across multiple AWS accounts and regions in a coordinated and automated manner.
+   - Stack sets are useful when you need to deploy the same infrastructure to multiple accounts or regions. They help you maintain consistency and ensure that the same resources and configurations are replicated across your organization's AWS accounts.
+   - You define a stack set with a template, just like a regular stack, but you can specify multiple accounts and regions where you want to deploy the stack set.
+
+Key differences:
+
+- A stack is used for managing resources within a single AWS account, while a stack set is used to manage resources across multiple AWS accounts and regions.
+- Stack sets are helpful in scenarios where you want to deploy the same resources and configurations consistently across different environments or accounts, such as dev, test, and production.
+
+AWS CloudFormation simplifies infrastructure management by providing tools for defining, deploying, and managing resources as code, allowing you to automate your infrastructure provisioning and management.
+
+npm init initialise our application
+
+sudo yum update
+# Install the Node.js 14.x repository
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash -
+
+# Install Node.js and npm
+sudo yum install -y nodejs
+
+node -v
+npm -v
+Troucleshoot:
+check the security group and firewall,make sure the inboud traffic recive f=traffic from port 3000
+
+
+1  clear
+    2  practice.pem ec2-user@34.224.57.60
+    3  su 
+    4  clear
+    5  mkdir october-cohort && cd october-cohert
+    6  ls
+    7  cd october-cohort/
+    8  mkdir nodejs-webapp && cd nodejs-webapp
+    9  cd ..
+   10  cd nodejs-webapp/
+   11  npm init
+   12  sudo yum update
+   13  # Install the Node.js 14.x repository
+   14  curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash -
+   15  # Install Node.js and npm
+   16  sudo yum install -y nodejs
+   17  node -v
+   18  npm -v
+   19  clear
+   20  npm init
+   21  ls
+   22  npm init
+   23  clear
+   24  ls
+   25  npm install express mocha
+   26  ls
+   27  clear
+   28  nano package.json
+   29  nano index.html
+   30  nano About.html
+   31  nona server.js
+   32  nano server.js
+   33  ls
+   34  cat package.json
+   35  clear
+   36  node server.js
+   37  ping
+   38  ping 35.172.228.179
+   39  netstat -tuln
+   40  cat package.json
+   41  cat server.js
+   42  npm install
+   43  npm start
+   44  ping6 35.172.228.179
+   45  npm start
+   46  history
+   47  clear
+   48  npm start
+   49  ls
+   50  cat About.html nano about.html
+   51  nano about.html
+   52  ls
+   53  nano about.html
+   54  ls
+   55  del About.html
+   56  rm About.html
+   57  ls
+   58  clear
+   59  npm start
+   60  history
+   61  cleae
+   62  clear
+   63  nano dockerfile
+   64  ls
+   65  nano .dockerignore
+   66  nano dockerfile
+   67  mv dockerfile Dockerfile
+   68  ls
+   69  cat Dockerfile
+   70  clear
+   71  ls
+   72  ls -al
+   73  clear
+   74  docker build -t anne/nodejs-webapp .
+   75  docker --version
+   76  sudo yum update
+   77  sudo yum install -y docker
+   78  lear
+   79  clear
+   80  sudo service docker start
+   81  sudo chkconfig docker on
+   82  sudo usermod -a -G docker ec2-user
+   83  clear
+   84  ls
+   85  cd october-cohort/
+   86  cd nodejs-webapp/
+   87  ls
+   88  docker --version
+   89  docker build -t anne/nodejs-webapp .
+   90  docker images
+   91* clea
+   92  docker images | grep anne/nodejs-webap
+   93  docker images | grep anne/nodejs-webapp
+   94  clear
+   95  docker run -itd anne/nodejs-webapp:latest
+   96  docker ps
+   97  doctl --version
+   98  curl -sLO https://github.com/digitalocean/doctl/releases/download/v1.63.0/doctl-1.63.0-linux-amd64.tar.gz
+   99  tar xvf doctl-1.63.0-linux-amd64.tar.gz
+  100  chmod +x doctl
+  101  sudo mv doctl /usr/local/bin
+  102  doctl auth init
+  103  doctl compute droplet list
+  104  clear
+  105  ls
+  106  docker ps
+  107  docker stop 678
+  108  docker ps
+  109  docker ps -a
+  110  docker rm 678
+  111  docker ps -a
+  112  docker run -itd -p 3000:3000 anne/nodejs-webapp:latest
+  113  clear
+  114  sudo yum update -y
+  115  sudo pip install awscli
+  116  sudo yum install python-pip
+  117  clear
+  118  sudo pip install awscli
+  119  aws --version
+  120  aws configure
+  121  sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+  122  sudo sh -c 'echo -e "[azure-cli]
+name=Azure CLI
+baseurl=https://packages.microsoft.com/yumrepos/azure-cli
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
+  123  sudo yum install azure-cli
+  124  clear
+  125  az --version
+  126  az upgrade
+  127  clear
+  128  az login
+  129  clear
+  130  az login
+  131  az login --tenant TENANT_ID
+  132  az login --390c5a80-c277-41b6-8e71-d41d313d0824
+  133  az login --tenant 390c5a80-c277-41b6-8e71-d41d313d0824
+  134  az account list
+  135  az login --tenant 390c5a80-c277-41b6-8e71-d41d313d0824
+  136  docker ps
+  137  docker rm fe9
+  138  docker stop fe9
+  139  docker rm fe9
+  140  docker ps -a
+  141  clear
+  142  az group create --name anne-Group --locate eastus
+  143  az group create --location westus --resource-group anne-Group
+  144  [200~az acr create --resource-group anne-Group --name anneacr --sku Standard --location westus
+  145  az acr create --resource-group anne-Group --name anneacr --sku Standard --location westus
+  146  az acr create --resource-group anne-Group --name annemarieacr --sku Standard --location westus
+  147  az acr login --name annemarieacr
+  148  clear
+  149  docker tag anne/nodejs-webapp:latest annemarieacr.azurecr.io/nodejswebapp:v1
+  150  docker images
+  151  docker push annemarieacr.azurecr.io/nodejswebapp:v1
+  152  az acr repository list --name annemarieacr --output table
+  153  az acr repository show-tags --name annemarieacr --repository nodejswebapp --output table
+  154  az group delete --name anne-Group
+  155  clear
+  156  az aks create --resource-group anne-Group --name anneCluster --node-count 2 --generate-ssh-keys --enable-addons monitoring
+  157  az group create --name anne-Group --location westus
+  158  az aks create --resource-group anne-Group --name anneCluster --node-count 2 --generate-ssh-keys --enable-addons monitoring
+  159  az aks show --name anneCluster --resource-group anne-Group
+  160  az login
+  161  az aks show --name anneCluster --resource-group anne-Group
+  162  az group create --name anne-Group --location westus
+  163  az aks create --resource-group anne-Group --name anneCluster --node-count 2 --generate-ssh-keys --enable-addons monitoring
+  164  az feature register --namespace Microsoft.OperationsManagement --name registered
+  165  az provider register -n Microsoft.OperationsManagement
+  166  az feature list -o table --query "[?contains(name, 'Microsoft.OperationsManagement')].{Name:name,State:properties.state}"
+  167  clear
+  168  az login
+  169  clear
+  170  az aks show --name anneCluster --resource-group anne-Group
+  171  az acr create --resource-group anne-Group --name annemarieacr --sku Standard --location westus
+  172  kubectl get node
+  173  sudo apt-get update
+  174  sudo apt-get install -y kubectl
+  175  sudo yum install -y kubectl
+  176  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+  177  chmod +x kubectl
+  178  sudo mv kubectl /usr/local/bin/
+  179  kubectl version --client
+  180  az aks get-credentials --resource-group anne-Group --name anneCluster --overwrite-existing
+  181  az aks list --resource-group anne-Group --output table
+  182  az aks delete --name anneCluster --resource-group anneGroup --yes --no-wait
+  183  az aks delete --name anneCluster --resource-group anne-Group --yes --no-wait
+  184  az aks list --resource-group anne-Group --output table
+  185  az login
+  186  az aks create --resource-group anne-Group --name anneCluster --node-count 2 --generate-ssh-keys --enable-addons monitoring
+  187  az aks show --name anneCluster --resource-group anne-Group
+  188  clear
+  189  kubectl get node
+  190  az aks get-credentials --resource-group anne-Group --name anneCluster --overwrite-existing
+  191  kubectl get node
+  192  kubectl get pods
+  193  nano deployment.yml
+  194  ls
+  195  kubectl apply -f deployment.yml
+  196  kubectl get pods
+  197  nano deployment.yml
+  198  az acr create --resource-group anne-Group --name annemarieacr --sku Standard --location westus
+  199  az aks update -n anneCluster -g anne-Group --attach-acr annemarieacr
+  200  clear
+  201  kubectl apply -f deployment.yml
+  202  kubectl get pods
+  203  nano deployment.yml
+  204  kubectl get pods
+  205  az acr login --name annemarieacr
+  206  docker tag anne/nodejs-webapp:latest annemarieacr.azurecr.io/nodejswebapp:v1
+  207  docker push annemarieacr.azurecr.io/nodejswebapp:v1
+  208  az acr repository list --name annemarieacr --output table
+  209  docker ps
+  210  docker push annemarieacr.azurecr.io/nodejswebapp:v1
+  211  docker images
+  212  docker ps -a
+  213  az aks show --name anneCluster --resource-group anne-Group
+  214  clear
+  215  az aks update -n anneCluster -g anne-Group --attach-acr annemarieacr
+  216  kubectl delete -f deployment.yml
+  217  az aks update -n anneCluster -g anne-Group --attach-acr annemarieacr
+  218  nano deployment.yml
+  219  kubectl apply -f deployment.yml
+  220  kubectlget pods
+  221  kubectl get pods
+  222  clean
+  223  clear
+  224  kubectl get svc
+  225  kubectl delete -f deployment.yml
+  226  az group delete --name anne-Group
+  227  history

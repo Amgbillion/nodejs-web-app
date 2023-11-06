@@ -1,0 +1,37 @@
+ping 35.172.228.179
+   39  netstat -tuln Verify Your Node.js App is Running: Ensure that your Node.js application is running on your EC2 instance and is listening on port 3000. You can check the status of your Node.js app by running the following command:
+   40  cat package.json 
+   41  cat server.js 
+   42  npm install
+   43  npm start
+   44  ping6 35.172.228.179
+   45  npm start
+   46  history
+   47  clear
+   48  npm start
+
+   TO INSTALL DOCKER 
+
+   sudo yum update
+   # Install required dependencies
+sudo yum install -y docker
+
+# Start the Docker service and enable it to start on boot
+sudo service docker start
+sudo chkconfig docker on
+
+# Add your user to the docker group to run Docker commands without sudo
+sudo usermod -a -G docker ec2-user
+Log Out and Log Back In:
+
+After adding your user to the Docker group, log out of your SSH session and log back in to apply the group changes. This step is necessary to run Docker commands without using sudo.
+
+Verify Docker Installation:
+
+After logging back in, you should be able to run Docker commands without encountering the "command not found" error. You can verify the Docker installation by running:
+
+bash
+Copy code
+docker --version
+This should display the Docker version information.
+
