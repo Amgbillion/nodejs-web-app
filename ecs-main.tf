@@ -20,7 +20,7 @@ resource "aws_ecs_task_definition" "my_task_definition" {
 [
   {
     "name": "my-container",
-    "image": "012010923904.dkr.ecr.us-east-1.amazonaws.com/netflix-oct:latest",  
+    "image": "012010923904.dkr.ecr.us-east-1.amazonaws.com/netflix-oct:v1",  
     "portMappings": [
       {
         "containerPort": 80,
