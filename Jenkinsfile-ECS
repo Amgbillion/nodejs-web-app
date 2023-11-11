@@ -5,8 +5,8 @@ pipeline {
     choice choices: ['apply', 'destroy'], description: 'Select the Appropriate Action Please', name: 'action'
        }
     environment {
-        AWS_ACCESS_KEY_ID = credentials('anneAWS_ACCESS_KEY_ID')
-        AWS_SECRET_ACCESS_KEY = credentials('anneAWS_SECRET_ACCESS_KEY')
+        AWS_ACCESS_KEY_ID = credentials('anne_AWS_ACCESS_KEY_ID')
+        AWS_SECRET_ACCESS_KEY = credentials('anne_AWS_SECRET_ACCESS_KEY')
         AWS_DEFAULT_REGION = "us-east-1"
     }
     stages {
