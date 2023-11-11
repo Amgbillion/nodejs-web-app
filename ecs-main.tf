@@ -20,7 +20,7 @@ resource "aws_ecs_task_definition" "my_task_definition" {
 [
   {
     "name": "my-container",
-    "image": "anne/nodejs-webapp:latest",  
+    "image": "annemariegainsom/amazon1:5",  
     "portMappings": [
       {
         "containerPort": 80,
