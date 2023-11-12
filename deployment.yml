@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: nodesy-container
-          image: anneoacr.azurecr.io/nodejswebapp:v1
+          image: annemariegainsom/anne_nodejswebapp:latest
           ports:
             - containerPort: 3000
 ---
